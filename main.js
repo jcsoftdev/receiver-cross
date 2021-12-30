@@ -34,7 +34,7 @@ const renderStorage = () => {
   const storage = getAllStorageKeys()
   console.log(storage)
   const el = {}
-  storage.forEach((item, i) => el[item.key] = item.value)
+  storage.forEach((item, i) => el[item.key] = JSON.parse(item.value))
   console.log({el})
   $storage.innerHTML = JSON.stringify(el, null, 4)
 }
